@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Generator Albume Foto</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Navbar -->
+    <nav class="bg-purple-600 p-4 text-white shadow-lg">
+        <div class="container mx-auto flex justify-between">
+            <h1 class="text-2xl font-bold">Generator Albume Foto</h1>
+            <ul class="flex space-x-6">
+                <li><a href="#" class="hover:text-gray-200">Acasă</a></li>
+                <li><a href="#" class="hover:text-gray-200">Albume</a></li>
+                <li><a href="#" class="hover:text-gray-200">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="text-center py-16 bg-white shadow-md">
+        <h2 class="text-4xl font-bold text-gray-800 mb-4">
+            Creează și organizează albumele tale foto
+        </h2>
+        <p class="text-gray-600 mb-6">
+            O platformă simplă pentru gestionarea fotografiilor tale preferate.
+        </p>
+        <button class="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition">
+            Creează Album Nou
+        </button>
+    </section>
+
+    <!-- Album Section -->
+    <section class="container mx-auto py-12">
+        <h3 class="text-3xl font-bold text-gray-800 mb-8 text-center">
+            Albumele mele
+        </h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+            <!-- Album Card -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition">
+                <img src="https://source.unsplash.com/400x300?nature" class="w-full">
+                <div class="p-4">
+                    <h4 class="text-xl font-semibold mb-2">Vacanța 2025</h4>
+                    <p class="text-gray-600 text-sm">15 fotografii</p>
+                    <button class="mt-4 w-full bg-purple-600 text-white py-2 rounded hover:bg-purple-700">
+                        Vezi Album
+                    </button>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition">
+                <img src="https://source.unsplash.com/400x300?city" class="w-full">
+                <div class="p-4">
+                    <h4 class="text-xl font-semibold mb-2">Orașe Vizitate</h4>
+                    <p class="text-gray-600 text-sm">20 fotografii</p>
+                    <button class="mt-4 w-full bg-purple-600 text-white py-2 rounded hover:bg-purple-700">
+                        Vezi Album
+                    </button>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition">
+                <img src="https://source.unsplash.com/400x300?family" class="w-full">
+                <div class="p-4">
+                    <h4 class="text-xl font-semibold mb-2">Familie</h4>
+                    <p class="text-gray-600 text-sm">10 fotografii</p>
+                    <button class="mt-4 w-full bg-purple-600 text-white py-2 rounded hover:bg-purple-700">
+                        Vezi Album
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-purple-600 text-white text-center py-4">
+        © 2026 Generator Albume Foto | Proiect Individual
+    </footer>
+
+</body>
+</html>
