@@ -2,85 +2,144 @@
 <html lang="ro">
 <head>
     <meta charset="UTF-8">
-    <title>Generator Albume Foto</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie Ultra Modernă</title>
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        body {
+            background: radial-gradient(circle at top left, #1e1b4b, #0f172a 60%);
+        }
+
+        .card-glow:hover {
+            box-shadow: 0 0 30px rgba(99,102,241,0.6);
+        }
+    </style>
 </head>
-<body class="bg-gray-100">
+
+<body class="text-white min-h-screen flex flex-col">
 
     <!-- Navbar -->
-    <nav class="bg-purple-600 p-4 text-white shadow-lg">
-        <div class="container mx-auto flex justify-between">
-            <h1 class="text-2xl font-bold">Generator Albume Foto</h1>
-            <ul class="flex space-x-6">
-                <li><a href="#" class="hover:text-gray-200">Acasă</a></li>
-                <li><a href="#" class="hover:text-gray-200">Albume</a></li>
-                <li><a href="#" class="hover:text-gray-200">Contact</a></li>
-            </ul>
+    <nav class="fixed w-full bg-black/40 backdrop-blur-xl border-b border-white/10 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold tracking-widest text-indigo-400">
+                ✦ Galerie
+            </h1>
+         
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="text-center py-16 bg-white shadow-md">
-        <h2 class="text-4xl font-bold text-gray-800 mb-4">
-            Creează și organizează albumele tale foto
-        </h2>
-        <p class="text-gray-600 mb-6">
-            O platformă simplă pentru gestionarea fotografiilor tale preferate.
-        </p>
-        <button class="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition">
-            Creează Album Nou
-        </button>
-    </section>
+    <!-- Hero -->
+    <header class="flex-1 flex flex-col justify-center items-center text-center px-6 pt-32 pb-20">
+        <h1 class="text-5xl md:text-6xl font-extrabold mb-6">
+           Album Foto
+        </h1>
+    
 
-    <!-- Album Section -->
-    <section class="container mx-auto py-12">
-        <h3 class="text-3xl font-bold text-gray-800 mb-8 text-center">
-            Albumele mele
-        </h3>
+        <label class="bg-indigo-600 hover:bg-indigo-700 transition px-8 py-4 rounded-full font-semibold cursor-pointer shadow-lg">
+            Încarcă imagini noi
+            <input id="fileInput" type="file" accept="image/*" multiple class="hidden">
+        </label>
+    </header>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <!-- Gallery -->
+    <main id="gallery" class="container mx-auto px-6 pb-20">
 
-            <!-- Album Card -->
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition">
-                <img src="https://source.unsplash.com/400x300?nature" class="w-full">
-                <div class="p-4">
-                    <h4 class="text-xl font-semibold mb-2">Vacanța 2025</h4>
-                    <p class="text-gray-600 text-sm">15 fotografii</p>
-                    <button class="mt-4 w-full bg-purple-600 text-white py-2 rounded hover:bg-purple-700">
-                        Vezi Album
-                    </button>
+        <div id="galleryGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
+
+            <!-- 1 -->
+            <div class="relative group overflow-hidden rounded-2xl card-glow transition duration-500">
+                <img src="https://i.pinimg.com/736x/7a/cb/96/7acb961dacc6324b7ca4f52d1f41e36d.jpg"
+                     class="w-full h-72 object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
+                    <span class="text-lg font-semibold">Imagine 1</span>
                 </div>
             </div>
 
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition">
-                <img src="https://source.unsplash.com/400x300?city" class="w-full">
-                <div class="p-4">
-                    <h4 class="text-xl font-semibold mb-2">Orașe Vizitate</h4>
-                    <p class="text-gray-600 text-sm">20 fotografii</p>
-                    <button class="mt-4 w-full bg-purple-600 text-white py-2 rounded hover:bg-purple-700">
-                        Vezi Album
-                    </button>
+            <!-- 2 -->
+            <div class="relative group overflow-hidden rounded-2xl card-glow transition duration-500">
+                <img src="https://i.pinimg.com/736x/f9/f0/8b/f9f08bd92386aaccd5d4f424d8e281ca.jpg"
+                     class="w-full h-72 object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
+                    <span class="text-lg font-semibold">Imagine 2</span>
                 </div>
             </div>
 
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition">
-                <img src="https://source.unsplash.com/400x300?family" class="w-full">
-                <div class="p-4">
-                    <h4 class="text-xl font-semibold mb-2">Familie</h4>
-                    <p class="text-gray-600 text-sm">10 fotografii</p>
-                    <button class="mt-4 w-full bg-purple-600 text-white py-2 rounded hover:bg-purple-700">
-                        Vezi Album
-                    </button>
+            <!-- 3 -->
+            <div class="relative group overflow-hidden rounded-2xl card-glow transition duration-500">
+                <img src="https://i.pinimg.com/736x/8f/56/ac/8f56acc92f1d20482533a638afcb94cf.jpg"
+                     class="w-full h-72 object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
+                    <span class="text-lg font-semibold">Imagine 3</span>
+                </div>
+            </div>
+
+            <!-- 4 -->
+            <div class="relative group overflow-hidden rounded-2xl card-glow transition duration-500">
+                <img src="https://i.pinimg.com/1200x/b7/ec/e1/b7ece17fa1be862f05b1c2afeed4e0e9.jpg"
+                     class="w-full h-72 object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
+                    <span class="text-lg font-semibold">Imagine 4</span>
+                </div>
+            </div>
+
+            <!-- 5 -->
+            <div class="relative group overflow-hidden rounded-2xl card-glow transition duration-500">
+                <img src="https://i.pinimg.com/736x/5e/e0/9d/5ee09d96b9e75a5c708f64810ae2b604.jpg"
+                     class="w-full h-72 object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
+                    <span class="text-lg font-semibold">Imagine 5</span>
+                </div>
+            </div>
+
+            <!-- 6 -->
+            <div class="relative group overflow-hidden rounded-2xl card-glow transition duration-500">
+                <img src="https://i.pinimg.com/736x/8d/4e/eb/8d4eeb718efd51d5ba3a2056aacd8440.jpg"
+                     class="w-full h-72 object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
+                    <span class="text-lg font-semibold">Imagine 6</span>
                 </div>
             </div>
 
         </div>
-    </section>
+    </main>
 
-    <!-- Footer -->
-    <footer class="bg-purple-600 text-white text-center py-4">
-        © 2026 Generator Albume Foto | Proiect Individual
-    </footer>
+    
+
+<script>
+    const fileInput = document.getElementById('fileInput');
+    const galleryGrid = document.getElementById('galleryGrid');
+
+    fileInput.addEventListener('change', function(event) {
+        const files = Array.from(event.target.files);
+        files.forEach(file => {
+            if (!file.type.startsWith('image/')) return;
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const wrapper = document.createElement('div');
+                wrapper.className = "relative group overflow-hidden rounded-2xl card-glow transition duration-500";
+
+                const img = document.createElement('img');
+                img.src = e.target.result;
+                img.className = "w-full h-72 object-cover transition duration-500 group-hover:scale-110";
+
+                const overlay = document.createElement('div');
+                overlay.className = "absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition";
+
+                const text = document.createElement('span');
+                text.className = "text-lg font-semibold";
+                text.innerText = "Imagine Nouă";
+
+                overlay.appendChild(text);
+                wrapper.appendChild(img);
+                wrapper.appendChild(overlay);
+                galleryGrid.appendChild(wrapper);
+            };
+            reader.readAsDataURL(file);
+        });
+    });
+</script>
 
 </body>
 </html>
